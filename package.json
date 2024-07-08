@@ -1,0 +1,17 @@
+{
+  "name": "ui_test_on_playwright-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "Lev Volkov",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10"
+  }
+}
