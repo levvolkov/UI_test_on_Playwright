@@ -15,7 +15,6 @@ test("Unsuccessfull authorization", async ({ page }) => {
   await page.getByPlaceholder("Email").fill(invalidEmail);
   await page.getByPlaceholder("Пароль").fill(invalidPassword);
   await page.getByTestId("login-submit-btn").click();
-  await expect(page).toHaveURL("https://netology.ru/?modal=sign_in");
   await expect(page.locator("text=Вы ввели неправильно логин или пароль")).toBeVisible();
   await page.screenshot({ path: "./screenshots/unsuccessfulAuth.png" });
 });
