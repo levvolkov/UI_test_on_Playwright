@@ -6,7 +6,7 @@ test("Successfull authorization", async ({ page }) => {
   await page.getByPlaceholder("Email").fill(email);
   await page.getByPlaceholder("Пароль").fill(password);
   await page.getByTestId("login-submit-btn").click();
-  await expect(page.locator("h2")).toContainText("Моё обучение");
+  await expect(page.locator("h2")).toHaveText("Моё обучение", { timeout: 10000,});
   await page.screenshot({ path: "./screenshots/successfulAuth.png" });
 });
 
